@@ -1,0 +1,197 @@
+/* ==========================================================================
+   NEXUS — responsive.css
+   Media Queries: tablet (até 1024px), menu hambúrguer (até 900px) e celular (até 600px).
+   ========================================================================== */
+
+/* 9. Media Queries -------------------------------------------------------- */
+
+/* Tablet e notebooks pequenos (até 1024px) */
+@media (max-width: 1024px) {
+  .grid--4,
+  .ods-grid,
+  .steps,
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .simulator {
+    grid-template-columns: 1fr;
+  }
+
+  .sim-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sim-log {
+    grid-column: 1 / -1;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Menu hambúrguer a partir de 900px */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    height: calc(100dvh - var(--header-height));
+    padding: var(--space-md) 1.25rem;
+    background: rgba(5, 7, 13, 0.98);
+    border-top: 1px solid var(--color-border);
+    overflow-y: auto;
+    /* Fechado: escondido acima com transição */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+  }
+
+  .main-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.3rem;
+  }
+
+  .main-nav a {
+    padding: 0.95rem 1rem;
+    font-size: 1.05rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+  }
+
+  .main-nav a[aria-current="page"] {
+    border-color: var(--color-cyan);
+  }
+
+  .main-nav a[aria-current="page"]::after {
+    display: none;
+  }
+
+  .split,
+  .contact-layout,
+  .tech-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-band {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+}
+
+/* Celulares (até 600px) */
+@media (max-width: 600px) {
+  :root {
+    --space-xl: 3.5rem;
+    --space-lg: 1.75rem;
+  }
+
+  .container {
+    width: min(100% - 2rem, var(--container));
+  }
+
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .ods-grid,
+  .steps,
+  .form-row,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .stat {
+    padding: 0.9rem;
+  }
+
+  .stat strong {
+    font-size: 1.7rem;
+  }
+
+  .sim-panel {
+    grid-template-columns: 1fr;
+  }
+
+  /* Rótulos maiores, pois o SVG encolhe bastante no celular */
+  .sim-node text {
+    font-size: 22px;
+  }
+
+  .sim-node .sim-node-icon {
+    font-size: 22px;
+  }
+
+  .simulator {
+    padding: 0.75rem;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+  }
+
+  .tabs-list {
+    width: 100%;
+    border-radius: var(--radius-md);
+  }
+
+  .tab-btn {
+    flex: 1 1 45%;
+    justify-content: center;
+    padding: 0.6rem 0.7rem;
+  }
+
+  .tech-detail,
+  .form-card {
+    padding: var(--space-md);
+  }
+
+  .layer {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .layer .badge {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .page-hero {
+    padding-block: 2.75rem 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
