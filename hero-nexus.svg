@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" role="img" aria-labelledby="t">
+  <title id="t">Ilustração: o pedido de socorro sai do dispositivo NEXUS direto para uma antena LoRa ou para um satélite e chega à central de resgate</title>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .lora{stroke:#22d3ee;stroke-width:3;stroke-dasharray:8 10;fill:none;animation:flow 1.4s linear infinite}
+      .sat{stroke:#60a5fa;stroke-width:2.5;stroke-dasharray:4 9;fill:none;animation:flow 2s linear infinite}
+      .ring{fill:none;stroke:#f43f5e;stroke-width:1.5;opacity:0;transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite}
+      .ring.r2{animation-delay:1.3s}
+      .wave{fill:none;stroke:#22d3ee;stroke-width:2;opacity:0;animation:fade 2s ease-in-out infinite}
+      .w2{animation-delay:.4s}.w3{animation-delay:.8s}
+      .label{font:600 12px system-ui,sans-serif;fill:#9aa8bd}
+      @keyframes flow{to{stroke-dashoffset:-36}}
+      @keyframes ping{0%{transform:scale(.7);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+      @keyframes fade{0%,100%{opacity:0}50%{opacity:1}}
+    </style>
+  </defs>
+
+  <circle cx="260" cy="230" r="210" fill="url(#glow)"/>
+
+  <!-- chão / cidade alagada -->
+  <path d="M20 372c30-8 50 8 80 0s50-8 80 0 50 8 80 0 50-8 80 0 50 8 80 0 50-8 80 0" stroke="#1e3a5f" stroke-width="2" fill="none"/>
+  <path d="M20 392c30-8 50 8 80 0s50-8 80 0 50 8 80 0 50-8 80 0 50 8 80 0 50-8 80 0" stroke="#16304f" stroke-width="2" fill="none"/>
+
+  <!-- caminhos -->
+  <path class="lora" d="M88 330 Q170 270 240 236"/>
+  <path class="lora" d="M262 236 Q350 260 420 300"/>
+  <path class="sat" d="M88 322 Q150 160 248 86"/>
+  <path class="sat" d="M276 86 Q390 160 436 286"/>
+
+  <!-- dispositivo NEXUS -->
+  <circle class="ring" cx="80" cy="335" r="16"/>
+  <circle class="ring r2" cx="80" cy="335" r="16"/>
+  <rect x="66" y="314" width="28" height="44" rx="7" fill="#1a0b12" stroke="#f43f5e" stroke-width="2.5"/>
+  <circle cx="80" cy="332" r="7" fill="#f43f5e"/>
+  <text x="80" y="350" text-anchor="middle" font-family="system-ui" font-weight="700" font-size="7" fill="#fda4af">SOS</text>
+
+  <!-- antena LoRa -->
+  <path d="M251 240l-18 80h36z" fill="none" stroke="#22d3ee" stroke-width="2.5"/>
+  <path d="M238 290h26M235 305h32" stroke="#22d3ee" stroke-width="2"/>
+  <circle cx="251" cy="236" r="6" fill="#22d3ee"/>
+  <path class="wave" d="M238 224a18 18 0 0 1 26 0"/>
+  <path class="wave w2" d="M231 216a28 28 0 0 1 40 0"/>
+  <path class="wave w3" d="M224 208a38 38 0 0 1 54 0"/>
+
+  <!-- satélite -->
+  <g transform="translate(262 80) rotate(-25)">
+    <rect x="-34" y="-8" width="22" height="16" rx="2" fill="#0b1f3a" stroke="#60a5fa" stroke-width="2"/>
+    <rect x="12" y="-8" width="22" height="16" rx="2" fill="#0b1f3a" stroke="#60a5fa" stroke-width="2"/>
+    <rect x="-10" y="-11" width="20" height="22" rx="4" fill="#101d34" stroke="#a5f3fc" stroke-width="2"/>
+    <path d="M-12 0h-0M10 0h2" stroke="#60a5fa" stroke-width="2"/>
+  </g>
+
+  <!-- central de resgate -->
+  <rect x="408" y="286" width="62" height="52" rx="8" fill="#06323b" stroke="#22d3ee" stroke-width="2.5"/>
+  <path d="M439 300v24M427 312h24" stroke="#e6f9ff" stroke-width="4" stroke-linecap="round"/>
+
+  <text class="label" x="40" y="380">Pedido de socorro</text>
+  <text class="label" x="268" y="330">Antena LoRa</text>
+  <text class="label" x="300" y="64">Satélite</text>
+  <text class="label" x="382" y="358">Central de resgate</text>
+</svg>
