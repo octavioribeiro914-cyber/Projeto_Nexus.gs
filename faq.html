@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perguntas e respostas sobre o NEXUS, LoRa, satélite, rede Mesh das antenas e emergências.">
+  <meta name="theme-color" content="#05070d">
+  <title>Perguntas frequentes | NEXUS</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-nexus.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/faq.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Cabeçalho com navegação principal -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="NEXUS — página inicial">
+        <img src="assets/icons/logo-nexus.svg" alt="" width="38" height="38">
+        NEXUS
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="solucao.html">Como funciona</a></li>
+          <li><a href="tecnologia.html">Tecnologias</a></li>
+          <li><a href="faq.html" aria-current="page">FAQ</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Você está em">
+          <a href="index.html">Início</a> <span aria-hidden="true">/</span> <span>FAQ</span>
+        </nav>
+        <span class="eyebrow">Perguntas frequentes</span>
+        <h1>Tire suas <span class="text-gradient">dúvidas</span></h1>
+        <p>Funcionamento, comunicação sem internet, LoRa, satélite, rede Mesh e uso em emergências.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-faq">
+      <div class="container">
+        <h2 id="titulo-faq" class="sr-only">Lista de perguntas</h2>
+
+        <div class="faq-tools">
+          <div class="search-field">
+            <label for="faq-search" class="sr-only">Buscar pergunta</label>
+            <input id="faq-search" type="search" placeholder="Buscar: LoRa, satélite, GPS..." autocomplete="off">
+          </div>
+          <div class="filter-group" role="group" aria-label="Filtrar por categoria">
+            <button class="filter-btn" type="button" data-filter="todas" aria-pressed="true">Todas</button>
+            <button class="filter-btn" type="button" data-filter="geral" aria-pressed="false">Geral</button>
+            <button class="filter-btn" type="button" data-filter="funcionamento" aria-pressed="false">Funcionamento</button>
+            <button class="filter-btn" type="button" data-filter="tecnologia" aria-pressed="false">Tecnologia</button>
+            <button class="filter-btn" type="button" data-filter="emergencia" aria-pressed="false">Emergência</button>
+          </div>
+        </div>
+
+        <p id="faq-count" class="sr-only" aria-live="polite"></p>
+
+        <div class="faq-list">
+          <article class="faq-item" data-category="geral">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-1" id="pergunta-1">
+                <span>O que é o NEXUS? <span class="badge faq-tag">Geral</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-1" role="region" aria-labelledby="pergunta-1">
+              <div class="faq-answer-inner">
+                <p>É uma proposta de dispositivo e plataforma de comunicação para emergências. Com um botão, a pessoa envia um pedido de socorro com sua localização direto para a central de resgate, por rádio LoRa ou por satélite, mesmo sem internet e sem sinal de celular.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item" data-category="geral">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-2" id="pergunta-2">
+                <span>O NEXUS já funciona de verdade? <span class="badge faq-tag">Geral</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-2" role="region" aria-labelledby="pergunta-2">
+              <div class="faq-answer-inner">
+                <p>Ainda não. O projeto está em fase de conceito e protótipo. Este site apresenta a ideia e uma simulação visual feita em JavaScript, mas o envio real por LoRa e satélite ainda não foi implementado.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item" data-category="funcionamento">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-3" id="pergunta-3">
+                <span>Como o pedido chega à central sem internet? <span class="badge faq-tag">Funcionamento</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-3" role="region" aria-labelledby="pergunta-3">
+              <div class="faq-answer-inner">
+                <p>O dispositivo envia o alerta por rádio LoRa para uma antena instalada pela Defesa Civil, que entrega à central. Se não houver antena ao alcance, o alerta vai para um satélite, que repassa para a central em terra. Nenhum dos dois caminhos usa internet ou torre de celular.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item" data-category="funcionamento">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-4" id="pergunta-4">
+                <span>Preciso de Bluetooth ou de outros celulares por perto? <span class="badge faq-tag">Funcionamento</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-4" role="region" aria-labelledby="pergunta-4">
+              <div class="faq-answer-inner">
+                <p>Não. O NEXUS não usa Bluetooth e não depende de outras pessoas: o alerta sai do seu dispositivo e vai direto para uma antena LoRa ou para um satélite. Isso faz diferença em áreas vazias ou quando todos estão sem bateria.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item" data-category="funcionamento">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-5" id="pergunta-5">
+                <span>E se a antena mais próxima cair? <span class="badge faq-tag">Funcionamento</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-5" role="region" aria-labelledby="pergunta-5">
+              <div class="faq-answer-inner">
+                <p>As antenas LoRa formam uma rede Mesh entre si. Se uma perder a conexão com a central, ela passa o alerta para uma antena vizinha. Se nenhuma antena funcionar, o dispositivo usa o satélite. Você pode testar isso na simulação da página Como funciona.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item" data-category="funcionamento">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-6" id="pergunta-6">
+                <span>O que acontece se nenhum canal estiver disponível? <span class="badge faq-tag">Funcionamento</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-6" role="region" aria-labelledby="pergunta-6">
+              <div class="faq-answer-inner">
+                <p>O alerta fica guardado no dispositivo e é reenviado automaticamente assim que uma antena ou o satélite voltar a responder, por exemplo quando a pessoa chega a um lugar com céu aberto.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item" data-category="tecnologia">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-7" id="pergunta-7">
+                <span>O que é LoRa e por que usar? <span class="badge faq-tag">Tecnologia</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-7" role="region" aria-labelledby="pergunta-7">
+              <div class="faq-answer-inner">
+                <p>LoRa (Long Range) é uma tecnologia de rádio que alcança quilômetros gastando pouquíssima energia. Ela transmite poucos dados, o que é suficiente para alertas curtos com localização.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item" data-category="tecnologia">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-8" id="pergunta-8">
+                <span>Por que usar satélite também? <span class="badge faq-tag">Tecnologia</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-8" role="region" aria-labelledby="pergunta-8">
+              <div class="faq-answer-inner">
+                <p>Porque não dá para ter antena em todo lugar. O satélite cobre áreas rurais, matas, rios e estradas. A limitação é que ele precisa de céu aberto e pode levar de segundos a alguns minutos para entregar a mensagem.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item" data-category="tecnologia">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-9" id="pergunta-9">
+                <span>O que é a rede Mesh no NEXUS? <span class="badge faq-tag">Tecnologia</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-9" role="region" aria-labelledby="pergunta-9">
+              <div class="faq-answer-inner">
+                <p>É a forma como as antenas se organizam: em malha, cada antena se conecta a várias vizinhas. Assim não existe um ponto único de falha. Os celulares das pessoas não fazem parte da malha.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item" data-category="tecnologia">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-10" id="pergunta-10">
+                <span>Como o NEXUS sabe onde estou sem internet? <span class="badge faq-tag">Tecnologia</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-10" role="region" aria-labelledby="pergunta-10">
+              <div class="faq-answer-inner">
+                <p>Pelo GPS. Ele calcula a posição recebendo sinais de satélites de navegação e não precisa de internet nem de operadora. A localização vai junto com o pedido de socorro.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item" data-category="emergencia">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-11" id="pergunta-11">
+                <span>Em quais situações o NEXUS seria útil? <span class="badge faq-tag">Emergência</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-11" role="region" aria-labelledby="pergunta-11">
+              <div class="faq-answer-inner">
+                <p>Em enchentes, deslizamentos, terremotos, incêndios, apagões prolongados e em comunidades isoladas, ou seja, sempre que a infraestrutura de telecomunicações estiver danificada, congestionada ou não existir.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item" data-category="emergencia">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-12" id="pergunta-12">
+                <span>Funciona dentro de casa? <span class="badge faq-tag">Emergência</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-12" role="region" aria-labelledby="pergunta-12">
+              <div class="faq-answer-inner">
+                <p>O LoRa costuma atravessar paredes razoavelmente bem, dependendo da distância até a antena. Já o satélite e o GPS precisam de céu aberto, então o ideal é ir para uma janela, laje ou área externa quando possível.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item" data-category="emergencia">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="resposta-13" id="pergunta-13">
+                <span>O NEXUS substitui os números de emergência? <span class="badge faq-tag">Emergência</span></span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-answer" id="resposta-13" role="region" aria-labelledby="pergunta-13">
+              <div class="faq-answer-inner">
+                <p>Não. O NEXUS é uma alternativa para quando os canais normais não funcionam. Se você tiver sinal, ligue para o 193 (Corpo de Bombeiros), 199 (Defesa Civil) ou 192 (SAMU).</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div id="faq-empty" class="faq-empty" hidden>
+          <p>Nenhuma pergunta encontrada. Tente outro termo ou <a href="contato.html">envie sua dúvida</a>.</p>
+        </div>
+
+        <div class="cta-band mt-lg reveal">
+          <div>
+            <h2>Não encontrou o que procurava?</h2>
+            <p>Mande sua pergunta para a equipe pelo formulário de contato.</p>
+          </div>
+          <a class="btn btn--primary" href="contato.html">Falar com a equipe <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <img src="assets/icons/logo-nexus.svg" alt="" width="38" height="38">
+            NEXUS
+          </a>
+          <p>Quando as redes falham, a comunicação continua. Projeto acadêmico da Global Solution 2026/2 — FIAP.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="solucao.html">Como funciona</a></li>
+            <li><a href="tecnologia.html">Tecnologias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Ajuda</h2>
+          <ul class="footer-links">
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="tel:193">Emergência real: ligue 193 ou 199</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Equipe NEXUS. Todos os direitos reservados.</p>
+        <p>Protótipo conceitual: o envio real por LoRa e satélite ainda não está implementado.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

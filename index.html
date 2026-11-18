@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEXUS: o pedido de socorro vai direto para a central de resgate por rádio LoRa ou satélite, sem internet e sem Bluetooth.">
+  <meta name="theme-color" content="#05070d">
+  <title>Comunicação em emergências | NEXUS</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-nexus.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Cabeçalho com navegação principal -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="NEXUS — página inicial">
+        <img src="assets/icons/logo-nexus.svg" alt="" width="38" height="38">
+        NEXUS
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="solucao.html">Como funciona</a></li>
+          <li><a href="tecnologia.html">Tecnologias</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- Hero: apresentação do NEXUS -->
+    <section class="hero">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Plataforma de comunicação em emergências</span>
+          <h1>Quando as redes falham, a <span class="text-gradient">comunicação continua.</span></h1>
+          <p class="hero-slogan">Conheça o NEXUS.</p>
+          <p class="hero-text">
+            O NEXUS é uma proposta de dispositivo de emergência que envia o pedido de socorro
+            <strong>direto para a central de resgate</strong>, por rádio LoRa ou por satélite.
+            Não precisa de internet, de Bluetooth, de sinal de operadora nem de outros celulares por perto.
+          </p>
+          <div class="btn-group">
+            <a class="btn btn--primary" href="solucao.html">Conhecer a solução <span aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="sobre.html">Sobre o projeto</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-2">
+          <span class="badge badge--warning">Protótipo conceitual</span>
+          <img src="assets/images/hero-nexus.svg" width="520" height="440"
+               alt="Ilustração: o pedido de socorro sai do dispositivo NEXUS direto para uma antena LoRa ou um satélite e chega à central de resgate">
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="stats" aria-label="NEXUS em números">
+          <li class="stat reveal">
+            <strong data-counter="2">2</strong>
+            <span>canais de envio: rádio LoRa e satélite</span>
+          </li>
+          <li class="stat reveal delay-1">
+            <strong data-counter="0">0</strong>
+            <span>dependência de internet, Bluetooth ou torres de celular</span>
+          </li>
+          <li class="stat reveal delay-2">
+            <strong data-counter="15" data-suffix=" km">15 km</strong>
+            <span>de alcance do LoRa em área aberta*</span>
+          </li>
+          <li class="stat reveal delay-3">
+            <strong data-counter="72" data-suffix=" h">72 h</strong>
+            <span>iniciais, as mais críticas para o resgate</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- O problema -->
+    <section class="section section--alt" aria-labelledby="titulo-problema">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">O problema</span>
+          <h2 id="titulo-problema">Em um desastre, a comunicação é a primeira a cair</h2>
+          <p>
+            Torres sem energia, cabos rompidos e redes congestionadas deixam as pessoas isoladas justamente
+            quando mais precisam pedir ajuda. Nas enchentes do Rio Grande do Sul, em 2024, cidades inteiras
+            ficaram sem sinal de celular e internet por dias.
+          </p>
+        </div>
+
+        <div class="grid grid--4">
+          <article class="card reveal">
+            <div class="icon-box icon-box--danger"><img src="assets/icons/waves.svg" alt=""></div>
+            <h3>Enchentes</h3>
+            <p>A água invade estações e corta a energia das torres. Famílias ilhadas não conseguem avisar onde estão.</p>
+          </article>
+          <article class="card reveal delay-1">
+            <div class="icon-box icon-box--danger"><img src="assets/icons/mountain.svg" alt=""></div>
+            <h3>Deslizamentos</h3>
+            <p>Encostas que cedem derrubam postes e cabos de fibra, isolando bairros inteiros em minutos.</p>
+          </article>
+          <article class="card reveal delay-2">
+            <div class="icon-box icon-box--danger"><img src="assets/icons/activity.svg" alt=""></div>
+            <h3>Terremotos</h3>
+            <p>Danos na infraestrutura e milhares de chamadas ao mesmo tempo congestionam o que sobra da rede.</p>
+          </article>
+          <article class="card reveal delay-3">
+            <div class="icon-box icon-box--danger"><img src="assets/icons/flame.svg" alt=""></div>
+            <h3>Incêndios</h3>
+            <p>Em áreas rurais e de mata, o sinal já é fraco. Com o fogo, antenas e linhas de energia são destruídas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como funciona (resumo) -->
+    <section class="section" aria-labelledby="titulo-como">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">A solução</span>
+          <h2 id="titulo-como">Do botão SOS <span class="text-gradient">direto</span> para a central</h2>
+          <p>Sem passar por outros celulares e sem depender da rede que caiu: o alerta segue por um canal próprio.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="card step reveal">
+            <div class="icon-box"><img src="assets/icons/siren.svg" alt=""></div>
+            <h3>Pedido de socorro</h3>
+            <p>A pessoa aperta o botão SOS. O GPS, que funciona sem internet, adiciona a localização ao alerta.</p>
+          </li>
+          <li class="card step reveal delay-1">
+            <div class="icon-box"><img src="assets/icons/radio.svg" alt=""></div>
+            <h3>Rádio LoRa</h3>
+            <p>Se houver uma antena NEXUS em até alguns quilômetros, o alerta vai direto para ela por rádio.</p>
+          </li>
+          <li class="card step reveal delay-2">
+            <div class="icon-box"><img src="assets/icons/satellite.svg" alt=""></div>
+            <h3>Satélite</h3>
+            <p>Sem antena ao alcance, o dispositivo envia o alerta para um satélite. Basta ter o céu aberto.</p>
+          </li>
+          <li class="card step reveal delay-3">
+            <div class="icon-box"><img src="assets/icons/shield.svg" alt=""></div>
+            <h3>Central de resgate</h3>
+            <p>A equipe recebe o alerta com a localização e o dispositivo recebe a confirmação de entrega.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="section section--alt" aria-labelledby="titulo-diferenciais">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Diferenciais</span>
+          <h2 id="titulo-diferenciais">Pensado para o pior cenário</h2>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="icon-box"><img src="assets/icons/wifi-off.svg" alt=""></div>
+            <h3>Sem internet e sem Bluetooth</h3>
+            <p>A proposta é funcionar quando a rede de dados e a telefonia estão fora do ar.</p>
+          </article>
+          <article class="card reveal delay-1">
+            <div class="icon-box"><img src="assets/icons/target.svg" alt=""></div>
+            <h3>Direto para a central</h3>
+            <p>O pedido não depende de outras pessoas por perto: sai do dispositivo e vai para a central.</p>
+          </article>
+          <article class="card reveal delay-2">
+            <div class="icon-box"><img src="assets/icons/layers.svg" alt=""></div>
+            <h3>Dois canais</h3>
+            <p>LoRa quando há antena por perto, satélite quando não há. A troca é automática.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon-box"><img src="assets/icons/network.svg" alt=""></div>
+            <h3>Antenas em malha</h3>
+            <p>As antenas LoRa formam uma rede Mesh entre si: se uma cai, a vizinha assume o envio.</p>
+          </article>
+          <article class="card reveal delay-1">
+            <div class="icon-box"><img src="assets/icons/map-pin.svg" alt=""></div>
+            <h3>Localização junto</h3>
+            <p>O alerta já sai com as coordenadas do GPS, que não precisa de internet.</p>
+          </article>
+          <article class="card reveal delay-2">
+            <div class="icon-box"><img src="assets/icons/clock.svg" alt=""></div>
+            <h3>Guarda e reenvia</h3>
+            <p>Se nenhum canal estiver disponível, o alerta fica salvo e é reenviado automaticamente.</p>
+          </article>
+        </div>
+
+        <p class="mt-lg">* O alcance do LoRa varia conforme relevo, obstáculos e antenas. Em áreas urbanas costuma ser de 2 a 5 km.</p>
+      </div>
+    </section>
+
+    <!-- Chamada para a simulação -->
+    <section class="section" aria-labelledby="titulo-cta">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2 id="titulo-cta">Veja o alerta chegar à central</h2>
+            <p>Simule o envio, derrube antenas e veja o NEXUS trocar de caminho ou ir para o satélite.</p>
+          </div>
+          <a class="btn btn--primary" href="solucao.html#simulacao">Abrir simulação <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <img src="assets/icons/logo-nexus.svg" alt="" width="38" height="38">
+            NEXUS
+          </a>
+          <p>Quando as redes falham, a comunicação continua. Projeto acadêmico da Global Solution 2026/2 — FIAP.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="solucao.html">Como funciona</a></li>
+            <li><a href="tecnologia.html">Tecnologias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Ajuda</h2>
+          <ul class="footer-links">
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="tel:193">Emergência real: ligue 193 ou 199</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Equipe NEXUS. Todos os direitos reservados.</p>
+        <p>Protótipo conceitual: o envio real por LoRa e satélite ainda não está implementado.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

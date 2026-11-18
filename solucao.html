@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Veja como o pedido de socorro chega direto à central de resgate por LoRa ou satélite, com simulação interativa.">
+  <meta name="theme-color" content="#05070d">
+  <title>Como funciona | NEXUS</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-nexus.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/mesh.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Cabeçalho com navegação principal -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="NEXUS — página inicial">
+        <img src="assets/icons/logo-nexus.svg" alt="" width="38" height="38">
+        NEXUS
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="solucao.html" aria-current="page">Como funciona</a></li>
+          <li><a href="tecnologia.html">Tecnologias</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Você está em">
+          <a href="index.html">Início</a> <span aria-hidden="true">/</span> <span>Como funciona</span>
+        </nav>
+        <span class="eyebrow">Como funciona</span>
+        <h1>O caminho de um <span class="text-gradient">pedido de socorro</span></h1>
+        <p>Veja como o alerta sai do dispositivo e chega direto à central de resgate, por rádio LoRa ou por satélite.</p>
+      </div>
+    </section>
+
+    <!-- Jornada da mensagem -->
+    <section class="section" aria-labelledby="titulo-jornada">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Passo a passo</span>
+          <h2 id="titulo-jornada">Da origem até a central</h2>
+        </div>
+        <ol class="steps">
+          <li class="card step reveal">
+            <div class="icon-box icon-box--danger"><img src="assets/icons/smartphone.svg" alt=""></div>
+            <h3>Dispositivo de origem</h3>
+            <p>A pessoa aperta o SOS no dispositivo NEXUS. Ele monta um alerta curto com localização GPS, horário e tipo de emergência.</p>
+          </li>
+          <li class="card step reveal delay-1">
+            <div class="icon-box"><img src="assets/icons/radio.svg" alt=""></div>
+            <h3>Antena LoRa</h3>
+            <p>O dispositivo tenta primeiro a antena LoRa mais próxima, instalada em um ponto alto. Ela entrega o alerta à central.</p>
+          </li>
+          <li class="card step reveal delay-2">
+            <div class="icon-box"><img src="assets/icons/satellite.svg" alt=""></div>
+            <h3>Satélite como reserva</h3>
+            <p>Se nenhuma antena responder, o alerta segue para um satélite, que o repassa à central em terra.</p>
+          </li>
+          <li class="card step reveal delay-3">
+            <div class="icon-box"><img src="assets/icons/shield.svg" alt=""></div>
+            <h3>Central de resgate</h3>
+            <p>A central mostra o alerta no mapa e envia uma confirmação de volta ao dispositivo.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Simulação interativa -->
+    <section class="section section--alt" id="simulacao" aria-labelledby="titulo-simulacao">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Simulação interativa</span>
+          <h2 id="titulo-simulacao">Simulador da rede NEXUS</h2>
+          <p>
+            Clique em <strong>Enviar alerta</strong> para ver o SOS chegar à central. Depois use
+            <strong>Simular falha</strong> para derrubar uma conexão: o NEXUS passa por outra antena da malha ou vai
+            para o satélite. Você também pode clicar direto em uma linha para derrubar ou restaurar a conexão.
+          </p>
+        </div>
+
+        <div class="simulator reveal">
+          <div class="sim-stage">
+            <svg id="mesh-svg" class="sim-svg" viewBox="0 0 900 480" role="img"
+                 aria-label="Mapa da rede NEXUS: dispositivo de origem à esquerda, antenas LoRa e satélite no meio e central de resgate à direita">
+            </svg>
+            <div class="sim-legend" aria-hidden="true">
+              <span class="legend-item"><span class="legend-dot legend-dot--origin"></span> Origem (SOS)</span>
+              <span class="legend-item"><span class="legend-dot legend-dot--node"></span> Antena LoRa</span>
+              <span class="legend-item"><span class="legend-dot legend-dot--satellite"></span> Satélite</span>
+              <span class="legend-item"><span class="legend-dot legend-dot--rescue"></span> Central de resgate</span>
+              <span class="legend-item"><span class="legend-line"></span> Caminho do alerta</span>
+              <span class="legend-item"><span class="legend-line legend-line--failed"></span> Conexão com falha</span>
+            </div>
+          </div>
+
+          <div class="sim-panel">
+            <div class="sim-status">
+              <span class="sim-status-label">Status de entrega</span>
+              <div id="sim-status" class="status-pill" data-status="idle" aria-live="polite">Aguardando envio</div>
+              <dl class="sim-metrics">
+                <div>
+                  <dt>Canal usado</dt>
+                  <dd id="sim-channel">—</dd>
+                </div>
+                <div>
+                  <dt>Tempo simulado</dt>
+                  <dd id="sim-time">0 s</dd>
+                </div>
+              </dl>
+              <p id="sim-route" class="sim-route"><strong>Caminho:</strong> —</p>
+            </div>
+
+            <div class="sim-controls">
+              <button id="btn-send" class="btn btn--primary" type="button">Enviar alerta</button>
+              <button id="btn-fail" class="btn btn--danger" type="button">Simular falha de conexão</button>
+              <button id="btn-reset" class="btn btn--ghost" type="button">Restaurar rede</button>
+            </div>
+
+            <ol id="sim-log" class="sim-log" aria-live="polite" aria-label="Registro da simulação"></ol>
+          </div>
+        </div>
+
+        <div class="notice mt-lg">
+          <img src="assets/icons/alert.svg" alt="">
+          <p>
+            Esta é uma <strong>simulação visual feita em JavaScript</strong> para explicar o conceito. Nenhuma mensagem
+            real é transmitida. Os tempos exibidos são estimativas didáticas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recursos do dispositivo -->
+    <section class="section" aria-labelledby="titulo-recursos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Protótipo do dispositivo</span>
+          <h2 id="titulo-recursos">Recursos planejados</h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="icon-box icon-box--danger"><img src="assets/icons/siren.svg" alt=""></div>
+            <h3>Botão SOS</h3>
+            <p>Um botão físico grande, pensado para ser usado com pressa, no escuro ou com as mãos molhadas.</p>
+          </article>
+          <article class="card reveal delay-1">
+            <div class="icon-box"><img src="assets/icons/message.svg" alt=""></div>
+            <h3>Mensagens prontas</h3>
+            <p>"Estou ilhado", "Há feridos", "Preciso de água": textos curtos, ideais para LoRa e satélite.</p>
+          </article>
+          <article class="card reveal delay-2">
+            <div class="icon-box"><img src="assets/icons/check.svg" alt=""></div>
+            <h3>Confirmação de entrega</h3>
+            <p>Uma luz e uma vibração avisam que o alerta chegou à central, o que reduz o pânico.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon-box"><img src="assets/icons/refresh.svg" alt=""></div>
+            <h3>Troca automática de canal</h3>
+            <p>O dispositivo escolhe sozinho entre a antena LoRa e o satélite, sem configuração.</p>
+          </article>
+          <article class="card reveal delay-1">
+            <div class="icon-box"><img src="assets/icons/eye.svg" alt=""></div>
+            <h3>Painel da Defesa Civil</h3>
+            <p>Mapa com os alertas recebidos, ordenados por gravidade e horário.</p>
+          </article>
+          <article class="card reveal delay-2">
+            <div class="icon-box"><img src="assets/icons/battery.svg" alt=""></div>
+            <h3>Bateria de longa duração</h3>
+            <p>LoRa e mensagens curtas gastam pouca energia, para o dispositivo durar dias.</p>
+          </article>
+        </div>
+
+        <div class="cta-band mt-lg reveal">
+          <div>
+            <h2>Quer entender cada tecnologia?</h2>
+            <p>LoRa, satélite, rede Mesh das antenas e GPS: veja o papel de cada uma no NEXUS.</p>
+          </div>
+          <a class="btn btn--primary" href="tecnologia.html">Ver tecnologias <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <img src="assets/icons/logo-nexus.svg" alt="" width="38" height="38">
+            NEXUS
+          </a>
+          <p>Quando as redes falham, a comunicação continua. Projeto acadêmico da Global Solution 2026/2 — FIAP.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="solucao.html">Como funciona</a></li>
+            <li><a href="tecnologia.html">Tecnologias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Ajuda</h2>
+          <ul class="footer-links">
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="tel:193">Emergência real: ligue 193 ou 199</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Equipe NEXUS. Todos os direitos reservados.</p>
+        <p>Protótipo conceitual: o envio real por LoRa e satélite ainda não está implementado.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

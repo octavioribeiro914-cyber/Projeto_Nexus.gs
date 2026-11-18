@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LoRa, satélite, rede Mesh das antenas e GPS: como as tecnologias do NEXUS trabalham juntas.">
+  <meta name="theme-color" content="#05070d">
+  <title>Tecnologias | NEXUS</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-nexus.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/tecnologia.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Cabeçalho com navegação principal -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="NEXUS — página inicial">
+        <img src="assets/icons/logo-nexus.svg" alt="" width="38" height="38">
+        NEXUS
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="solucao.html">Como funciona</a></li>
+          <li><a href="tecnologia.html" aria-current="page">Tecnologias</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Você está em">
+          <a href="index.html">Início</a> <span aria-hidden="true">/</span> <span>Tecnologias</span>
+        </nav>
+        <span class="eyebrow">Tecnologias</span>
+        <h1>Quatro tecnologias, <span class="text-gradient">uma só rede</span></h1>
+        <p>Sem internet, sem Bluetooth e sem depender de outros celulares: o NEXUS combina rádio LoRa, satélite, antenas em malha e GPS para o alerta sempre chegar à central.</p>
+      </div>
+    </section>
+
+    <!-- Abas com cada tecnologia -->
+    <section class="section" aria-labelledby="titulo-tecnologias">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Conheça cada uma</span>
+          <h2 id="titulo-tecnologias">Escolha uma tecnologia</h2>
+        </div>
+
+        <div class="reveal">
+          <div class="tabs-list" role="tablist" aria-label="Tecnologias do NEXUS">
+            <button class="tab-btn" id="aba-lora" role="tab" type="button" aria-selected="true" aria-controls="painel-lora">
+              <img src="assets/icons/radio.svg" alt=""> LoRa
+            </button>
+            <button class="tab-btn" id="aba-satelite" role="tab" type="button" aria-selected="false" aria-controls="painel-satelite" tabindex="-1">
+              <img src="assets/icons/satellite.svg" alt=""> Satélite
+            </button>
+            <button class="tab-btn" id="aba-mesh" role="tab" type="button" aria-selected="false" aria-controls="painel-mesh" tabindex="-1">
+              <img src="assets/icons/network.svg" alt=""> Mesh das antenas
+            </button>
+            <button class="tab-btn" id="aba-gps" role="tab" type="button" aria-selected="false" aria-controls="painel-gps" tabindex="-1">
+              <img src="assets/icons/map-pin.svg" alt=""> GPS
+            </button>
+          </div>
+
+          <div class="tab-panel" id="painel-lora" role="tabpanel" aria-labelledby="aba-lora" tabindex="0">
+            <div class="tech-detail">
+              <div>
+                <h3>LoRa (Long Range)</h3>
+                <p>Tecnologia de rádio para longas distâncias com consumo baixíssimo de energia. Transmite poucos dados por vez, o que é perfeito para mensagens curtas de emergência. Não usa internet nem operadora.</p>
+                <h4>Como o NEXUS usa</h4>
+                <ul class="check-list">
+                <li>Canal principal: o dispositivo envia o SOS direto para a antena LoRa mais próxima.</li>
+                <li>Antenas instaladas em pontos altos, como escolas, quartéis e postos de saúde.</li>
+                <li>Antenas com bateria e painel solar, para continuar funcionando sem energia elétrica.</li>
+                </ul>
+                <h4>Pontos fortes e limites</h4>
+                <p><strong>A favor:</strong> alcance de quilômetros, baixo custo e bateria que dura dias.</p>
+                <p><strong>Limite:</strong> precisa de antenas instaladas na região e transmite pouca informação por vez.</p>
+              </div>
+              <dl class="spec-list">
+                <div>
+                  <dt>Alcance típico</dt>
+                  <dd>2 a 5 km na cidade, até 15 km em área aberta</dd>
+                  <div class="range-bar" aria-hidden="true"><span class="w-25"></span></div>
+                </div>
+                <div>
+                  <dt>Velocidade</dt>
+                  <dd>Muito baixa (mensagens curtas)</dd>
+                </div>
+                <div>
+                  <dt>Consumo de energia</dt>
+                  <dd>Muito baixo</dd>
+                </div>
+                <div>
+                  <dt>Papel no NEXUS</dt>
+                  <dd>Canal principal até a central</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="tab-panel" id="painel-satelite" role="tabpanel" aria-labelledby="aba-satelite" tabindex="0" hidden>
+            <div class="tech-detail">
+              <div>
+                <h3>Comunicação via satélite</h3>
+                <p>Satélites de órbita baixa conseguem receber mensagens curtas enviadas direto de aparelhos em solo, sem antena de celular no caminho. Alguns celulares recentes já oferecem SOS por satélite.</p>
+                <h4>Como o NEXUS usa</h4>
+                <ul class="check-list">
+                <li>Canal reserva: entra quando nenhuma antena LoRa responde.</li>
+                <li>Cobre áreas rurais, rios, matas e estradas onde não há antena.</li>
+                <li>O satélite repassa o alerta para uma estação em terra, que entrega à central.</li>
+                </ul>
+                <h4>Pontos fortes e limites</h4>
+                <p><strong>A favor:</strong> funciona praticamente em qualquer lugar com o céu aberto.</p>
+                <p><strong>Limite:</strong> precisa de visão do céu (não funciona bem dentro de casa) e o envio pode levar de segundos a alguns minutos.</p>
+              </div>
+              <dl class="spec-list">
+                <div>
+                  <dt>Alcance</dt>
+                  <dd>Praticamente todo o território</dd>
+                  <div class="range-bar" aria-hidden="true"><span class="w-100"></span></div>
+                </div>
+                <div>
+                  <dt>Velocidade</dt>
+                  <dd>Baixa (mensagens curtas)</dd>
+                </div>
+                <div>
+                  <dt>Consumo de energia</dt>
+                  <dd>Médio</dd>
+                </div>
+                <div>
+                  <dt>Papel no NEXUS</dt>
+                  <dd>Canal reserva quando não há antena</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="tab-panel" id="painel-mesh" role="tabpanel" aria-labelledby="aba-mesh" tabindex="0" hidden>
+            <div class="tech-detail">
+              <div>
+                <h3>Rede Mesh das antenas</h3>
+                <p>Mesh não é um tipo de rádio, e sim uma forma de organizar a rede. No NEXUS, a malha é formada pelas antenas LoRa, e não por celulares de pessoas: cada antena se conecta a outras antenas vizinhas.</p>
+                <h4>Como o NEXUS usa</h4>
+                <ul class="check-list">
+                <li>Se o link de uma antena com a central cair, ela repassa o alerta para uma antena vizinha.</li>
+                <li>A pessoa continua apertando um botão só: o desvio acontece dentro da rede de antenas.</li>
+                <li>Se nenhuma antena conseguir entregar, o dispositivo usa o satélite.</li>
+                </ul>
+                <h4>Pontos fortes e limites</h4>
+                <p><strong>A favor:</strong> não tem ponto único de falha: a queda de uma antena não derruba a rede.</p>
+                <p><strong>Limite:</strong> exige planejamento para posicionar as antenas e cobrir toda a área de risco.</p>
+              </div>
+              <dl class="spec-list">
+                <div>
+                  <dt>Quem forma a malha</dt>
+                  <dd>Antenas LoRa (não celulares)</dd>
+                </div>
+                <div>
+                  <dt>Ponto central</dt>
+                  <dd>Não existe</dd>
+                </div>
+                <div>
+                  <dt>Resiliência</dt>
+                  <dd>Alta: busca outra antena</dd>
+                  <div class="range-bar" aria-hidden="true"><span class="w-60"></span></div>
+                </div>
+                <div>
+                  <dt>Papel no NEXUS</dt>
+                  <dd>Desvia o alerta se uma antena cair</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="tab-panel" id="painel-gps" role="tabpanel" aria-labelledby="aba-gps" tabindex="0" hidden>
+            <div class="tech-detail">
+              <div>
+                <h3>GPS (localização)</h3>
+                <p>O GPS calcula a posição recebendo sinais de satélites de navegação. Ele só recebe sinal, não transmite, e por isso funciona sem internet e sem operadora.</p>
+                <h4>Como o NEXUS usa</h4>
+                <ul class="check-list">
+                <li>Adiciona latitude e longitude a todo pedido de socorro.</li>
+                <li>Atualiza a posição se a pessoa se deslocar, por exemplo arrastada pela água.</li>
+                <li>Permite à central mostrar cada alerta no mapa.</li>
+                </ul>
+                <h4>Pontos fortes e limites</h4>
+                <p><strong>A favor:</strong> funciona em qualquer lugar com céu aberto e não precisa de rede.</p>
+                <p><strong>Limite:</strong> perde precisão dentro de prédios e em locais fechados.</p>
+              </div>
+              <dl class="spec-list">
+                <div>
+                  <dt>Alcance</dt>
+                  <dd>Global</dd>
+                  <div class="range-bar" aria-hidden="true"><span class="w-100"></span></div>
+                </div>
+                <div>
+                  <dt>Precisão</dt>
+                  <dd>Poucos metros com céu aberto</dd>
+                </div>
+                <div>
+                  <dt>Consumo de energia</dt>
+                  <dd>Baixo</dd>
+                </div>
+                <div>
+                  <dt>Papel no NEXUS</dt>
+                  <dd>Dizer onde a pessoa está</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como trabalham juntas -->
+    <section class="section section--alt" aria-labelledby="titulo-juntas">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Trabalhando juntas</span>
+          <h2 id="titulo-juntas">Uma ordem de tentativas</h2>
+          <p>
+            Ao apertar o SOS, o dispositivo pega a localização pelo GPS e tenta a antena LoRa mais próxima. Se essa
+            antena não conseguir falar com a central, a malha de antenas desvia o alerta por uma vizinha. Se nenhuma
+            antena estiver ao alcance, o alerta vai para o satélite. Tudo automático, sem passar por celulares de
+            outras pessoas.
+          </p>
+          <a class="btn btn--ghost mt-lg" href="solucao.html#simulacao">Ver na simulação <span aria-hidden="true">→</span></a>
+        </div>
+        <ol class="layers reveal delay-1">
+          <li class="layer">
+            <div class="icon-box"><img src="assets/icons/map-pin.svg" alt=""></div>
+            <div>
+              <h3>1. GPS</h3>
+              <p>Descobre onde a pessoa está, sem internet.</p>
+            </div>
+            <span class="badge">localização</span>
+          </li>
+          <li class="layer">
+            <div class="icon-box"><img src="assets/icons/radio.svg" alt=""></div>
+            <div>
+              <h3>2. Antena LoRa</h3>
+              <p>Leva o alerta direto à central.</p>
+            </div>
+            <span class="badge">quilômetros</span>
+          </li>
+          <li class="layer">
+            <div class="icon-box"><img src="assets/icons/network.svg" alt=""></div>
+            <div>
+              <h3>3. Mesh das antenas</h3>
+              <p>Desvia por outra antena se uma cair.</p>
+            </div>
+            <span class="badge">resiliência</span>
+          </li>
+          <li class="layer">
+            <div class="icon-box"><img src="assets/icons/satellite.svg" alt=""></div>
+            <div>
+              <h3>4. Satélite</h3>
+              <p>Reserva para quando não há antena.</p>
+            </div>
+            <span class="badge">qualquer lugar</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Tabela comparativa -->
+    <section class="section" aria-labelledby="titulo-comparativo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Comparativo</span>
+          <h2 id="titulo-comparativo">Lado a lado</h2>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="compare-table">
+            <caption class="sr-only">Comparação entre as tecnologias usadas pelo NEXUS</caption>
+            <thead>
+              <tr>
+                <th scope="col">Tecnologia</th>
+                <th scope="col">Alcance típico</th>
+                <th scope="col">Tempo de envio</th>
+                <th scope="col">Consumo</th>
+                <th scope="col">Depende de quê?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">LoRa</th>
+                <td>2 a 15 km</td>
+                <td>Segundos</td>
+                <td>Muito baixo</td>
+                <td>Antenas NEXUS na região</td>
+              </tr>
+              <tr>
+                <th scope="row">Satélite</th>
+                <td>Quase todo o território</td>
+                <td>Segundos a minutos</td>
+                <td>Médio</td>
+                <td>Céu aberto</td>
+              </tr>
+              <tr>
+                <th scope="row">Mesh das antenas</th>
+                <td>Soma das antenas</td>
+                <td>Segundos</td>
+                <td>Distribuído</td>
+                <td>Antenas vizinhas</td>
+              </tr>
+              <tr>
+                <th scope="row">GPS</th>
+                <td>Global</td>
+                <td>Só recebe sinal</td>
+                <td>Baixo</td>
+                <td>Céu aberto</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-lg">Valores aproximados, que variam com o equipamento, o relevo, o clima e os obstáculos.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <img src="assets/icons/logo-nexus.svg" alt="" width="38" height="38">
+            NEXUS
+          </a>
+          <p>Quando as redes falham, a comunicação continua. Projeto acadêmico da Global Solution 2026/2 — FIAP.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="solucao.html">Como funciona</a></li>
+            <li><a href="tecnologia.html">Tecnologias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Ajuda</h2>
+          <ul class="footer-links">
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="tel:193">Emergência real: ligue 193 ou 199</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Equipe NEXUS. Todos os direitos reservados.</p>
+        <p>Protótipo conceitual: o envio real por LoRa e satélite ainda não está implementado.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

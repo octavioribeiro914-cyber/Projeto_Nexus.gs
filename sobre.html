@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Origem, problema, objetivos e importância do NEXUS, projeto de comunicação independente de internet.">
+  <meta name="theme-color" content="#05070d">
+  <title>Sobre o projeto | NEXUS</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo-nexus.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Cabeçalho com navegação principal -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="NEXUS — página inicial">
+        <img src="assets/icons/logo-nexus.svg" alt="" width="38" height="38">
+        NEXUS
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html" aria-current="page">Sobre</a></li>
+          <li><a href="solucao.html">Como funciona</a></li>
+          <li><a href="tecnologia.html">Tecnologias</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Você está em">
+          <a href="index.html">Início</a> <span aria-hidden="true">/</span> <span>Sobre o projeto</span>
+        </nav>
+        <span class="eyebrow">Sobre o projeto</span>
+        <h1>Por que o <span class="text-gradient">NEXUS</span> existe</h1>
+        <p>Uma ideia que nasce de uma pergunta simples: como pedir socorro quando o celular mostra "sem serviço"?</p>
+      </div>
+    </section>
+
+    <!-- Origem da ideia -->
+    <section class="section" aria-labelledby="titulo-origem">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Origem da ideia</span>
+          <h2 id="titulo-origem">Tudo depende de uma torre</h2>
+          <p>
+            Ao estudar desastres recentes no Brasil, como as enchentes no Rio Grande do Sul e os deslizamentos
+            no litoral de São Paulo, a equipe percebeu um padrão: a comunicação some nas primeiras horas, que são
+            justamente as mais importantes para encontrar pessoas.
+          </p>
+          <p class="mt-lg">
+            A rede de celular é centralizada. Se a torre perde energia, todos os aparelhos ao redor ficam isolados.
+            Soluções que dependem de outros celulares por perto também falham em áreas vazias ou quando as baterias
+            acabam. O NEXUS propõe um caminho próprio: o pedido de socorro vai direto para a central por rádio LoRa
+            ou por satélite.
+          </p>
+        </div>
+        <figure class="figure-card reveal delay-2">
+          <img src="assets/images/rede-tradicional-vs-nexus.svg" width="640" height="280"
+               alt="Comparação: na rede tradicional, a torre caída isola todos os aparelhos; no NEXUS, o pedido de socorro vai direto para uma antena LoRa ou um satélite e chega à central">
+          <figcaption>Rede tradicional x envio direto proposto pelo NEXUS.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Problema identificado -->
+    <section class="section section--alt" aria-labelledby="titulo-problema">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Problema identificado</span>
+          <h2 id="titulo-problema">Três falhas que se repetem</h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="icon-box icon-box--danger"><img src="assets/icons/zap.svg" alt=""></div>
+            <h3>Infraestrutura frágil</h3>
+            <p>Torres e centrais dependem de energia elétrica e cabos. Quando eles falham, o sinal acaba.</p>
+          </article>
+          <article class="card reveal delay-1">
+            <div class="icon-box icon-box--danger"><img src="assets/icons/users.svg" alt=""></div>
+            <h3>Rede congestionada</h3>
+            <p>Na hora do desastre, todos tentam ligar ao mesmo tempo e a rede que restou não aguenta.</p>
+          </article>
+          <article class="card reveal delay-2">
+            <div class="icon-box icon-box--danger"><img src="assets/icons/map-pin.svg" alt=""></div>
+            <h3>Localização desconhecida</h3>
+            <p>Sem comunicação, as equipes de resgate não sabem onde estão as pessoas que precisam de ajuda.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objetivos -->
+    <section class="section" aria-labelledby="titulo-objetivos">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Objetivos</span>
+          <h2 id="titulo-objetivos">O que queremos alcançar</h2>
+          <p>
+            <strong>Objetivo geral:</strong> criar uma alternativa de comunicação para situações extremas, que leve o
+            pedido de socorro direto para a central de resgate, sem depender de internet, Bluetooth, torres de celular
+            ou de outros aparelhos por perto.
+          </p>
+        </div>
+        <ul class="check-list reveal delay-1">
+          <li><strong>Enviar o SOS por rádio LoRa</strong> para antenas instaladas pela Defesa Civil.</li>
+          <li><strong>Usar o satélite</strong> quando não houver antena ao alcance.</li>
+          <li><strong>Trocar de canal sozinho</strong>, sem a pessoa precisar escolher nada.</li>
+          <li><strong>Manter as antenas em malha</strong>, para uma cobrir a outra se cair.</li>
+          <li><strong>Enviar a localização</strong> por GPS junto com o pedido de ajuda.</li>
+          <li><strong>Apoiar a Defesa Civil</strong> com um painel de alertas recebidos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Público e ecossistema -->
+    <section class="section section--alt" aria-labelledby="titulo-publico">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Para quem</span>
+          <h2 id="titulo-publico">Quem é beneficiado e quem participa</h2>
+        </div>
+        <div class="grid grid--4">
+          <article class="card reveal">
+            <div class="icon-box"><img src="assets/icons/users.svg" alt=""></div>
+            <h3>Moradores de áreas de risco</h3>
+            <p>Pessoas em regiões sujeitas a enchentes, deslizamentos e incêndios.</p>
+          </article>
+          <article class="card reveal delay-1">
+            <div class="icon-box"><img src="assets/icons/globe.svg" alt=""></div>
+            <h3>Comunidades isoladas</h3>
+            <p>Zonas rurais e ribeirinhas onde o sinal já é fraco no dia a dia.</p>
+          </article>
+          <article class="card reveal delay-2">
+            <div class="icon-box"><img src="assets/icons/shield.svg" alt=""></div>
+            <h3>Equipes de resgate</h3>
+            <p>Bombeiros e Defesa Civil, que recebem os alertas com localização.</p>
+          </article>
+          <article class="card reveal delay-3">
+            <div class="icon-box"><img src="assets/icons/heart.svg" alt=""></div>
+            <h3>Prefeituras e ONGs</h3>
+            <p>Instalam as antenas LoRa em pontos altos e distribuem os dispositivos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Importância -->
+    <section class="section" aria-labelledby="titulo-importancia">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Importância</span>
+          <h2 id="titulo-importancia">Comunicação independente salva tempo, e tempo salva vidas</h2>
+          <p>
+            Um canal que não depende de internet nem de torres continua de pé quando o resto cai. Com LoRa e satélite
+            juntos, o pedido de ajuda tem sempre uma segunda opção, inclusive em lugares onde não há ninguém por perto.
+          </p>
+          <p class="mt-lg">
+            Para medir o impacto, o projeto propõe acompanhar indicadores como o tempo entre o pedido de ajuda e a
+            chegada à central, a porcentagem de alertas entregues e a área coberta pelas antenas em testes simulados.
+          </p>
+        </div>
+        <div class="notice reveal delay-1">
+          <img src="assets/icons/alert.svg" alt="">
+          <p>
+            <strong>Importante:</strong> o NEXUS está em fase de conceito e protótipo. Este site apresenta a ideia e
+            uma simulação visual; o envio real por LoRa e satélite ainda não está implementado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ODS -->
+    <section class="section section--alt" aria-labelledby="titulo-ods">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Agenda 2030 da ONU</span>
+          <h2 id="titulo-ods">Conexão com os Objetivos de Desenvolvimento Sustentável</h2>
+        </div>
+        <div class="ods-grid">
+          <article class="card ods-card ods-3 reveal">
+            <span class="ods-number">ODS 3</span>
+            <h3>Saúde e bem-estar</h3>
+            <p>Acelera o atendimento a feridos e pessoas em risco durante desastres.</p>
+          </article>
+          <article class="card ods-card ods-9 reveal delay-1">
+            <span class="ods-number">ODS 9</span>
+            <h3>Indústria, inovação e infraestrutura</h3>
+            <p>Cria uma infraestrutura de comunicação resiliente e de baixo custo.</p>
+          </article>
+          <article class="card ods-card ods-11 reveal delay-2">
+            <span class="ods-number">ODS 11</span>
+            <h3>Cidades e comunidades sustentáveis</h3>
+            <p>Torna cidades e comunidades mais preparadas e seguras diante de desastres.</p>
+          </article>
+          <article class="card ods-card ods-13 reveal delay-3">
+            <span class="ods-number">ODS 13</span>
+            <h3>Ação contra a mudança do clima</h3>
+            <p>Ajuda a população a se adaptar a eventos climáticos extremos cada vez mais frequentes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <img src="assets/icons/logo-nexus.svg" alt="" width="38" height="38">
+            NEXUS
+          </a>
+          <p>Quando as redes falham, a comunicação continua. Projeto acadêmico da Global Solution 2026/2 — FIAP.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="solucao.html">Como funciona</a></li>
+            <li><a href="tecnologia.html">Tecnologias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Ajuda</h2>
+          <ul class="footer-links">
+            <li><a href="faq.html">Perguntas frequentes</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="tel:193">Emergência real: ligue 193 ou 199</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Equipe NEXUS. Todos os direitos reservados.</p>
+        <p>Protótipo conceitual: o envio real por LoRa e satélite ainda não está implementado.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
